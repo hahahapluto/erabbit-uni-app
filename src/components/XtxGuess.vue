@@ -5,7 +5,7 @@ import { getHomeGoodsGuessLikeAPI } from '@/services/home'
 import type { GuessItem } from '@/types/global'
 
 // 获取猜你喜欢数据
-const guessList = ref<GuessItem[]>()
+const guessList = ref<GuessItem[]>([])
 const getHomeGoodsGuessLikeData = async () => {
   const res = await getHomeGoodsGuessLikeAPI()
   guessList.value = res.result.items
@@ -13,6 +13,11 @@ const getHomeGoodsGuessLikeData = async () => {
 
 onMounted(() => {
   getHomeGoodsGuessLikeData()
+})
+
+// 暴露方法
+defineExpose({
+  getMore: getHomeGoodsGuessLikeData,
 })
 </script>
 
