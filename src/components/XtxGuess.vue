@@ -2,13 +2,32 @@
 import { ref } from 'vue'
 import { onMounted } from 'vue'
 import { getHomeGoodsGuessLikeAPI } from '@/services/home'
-import type { GuessItem } from '@/types/global'
+import type { GuessItem, PageParams } from '@/types/global'
+
+// 分页参数
+const pageParams: Required<PageParams> = {
+  page: 1,
+  pageSize: 10,
+}
 
 // 获取猜你喜欢数据
 const guessList = ref<GuessItem[]>([])
+// 已经结束的标记
+const finish = ref(false)
 const getHomeGoodsGuessLikeData = async () => {
-  const res = await getHomeGoodsGuessLikeAPI()
-  guessList.value = res.result.items
+  // 退出判断
+  if (finish.value) {
+    return uni.showToast({ icon: 'none', title: '没有更多数据了' })
+  }
+  const res = await getHomeGoodsGuessLikeAPI(pageParams)
+  // 数组追加
+  guessList.value.push(...res.result.items)
+  if (pageParams.page < res.result.pages) {
+    // 页码累加
+    pageParams.page++
+  } else {
+    finish.value = true
+  }
 }
 
 onMounted(() => {
@@ -41,7 +60,7 @@ defineExpose({
       </view>
     </navigator>
   </view>
-  <view class="loading-text"> 正在加载... </view>
+  <view class="loading-text"> {{ finish ? '没有更多数据啦~' : '正在加载中……' }}. </view>
 </template>
 
 <style lang="scss">
