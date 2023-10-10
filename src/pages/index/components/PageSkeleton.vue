@@ -1,13 +1,7 @@
 <template name="skeleton">
   <view is="components/XtxSwiper">
     <view class="carousel XtxSwiper--carousel">
-      <swiper
-        :circular="true"
-        :interval="3000"
-        :current="0"
-        :autoplay="false"
-        style="width: 100%; height: 150px"
-      >
+      <swiper :circular="true" :interval="3000" :current="0" :autoplay="false">
         <swiper-item
           style="
             position: absolute;
@@ -34,61 +28,59 @@
     <view class="category CategoryPanel--category">
       <navigator class="category-item CategoryPanel--category-item" hover-class="none">
         <image class="icon CategoryPanel--icon sk-image"></image>
-        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-414 sk-text"
+        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-175 sk-text"
           >居家</text
         >
       </navigator>
       <navigator class="category-item CategoryPanel--category-item" hover-class="none">
         <image class="icon CategoryPanel--icon sk-image"></image>
-        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-268 sk-text"
+        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-231 sk-text"
           >锦鲤</text
         >
       </navigator>
       <navigator class="category-item CategoryPanel--category-item" hover-class="none">
         <image class="icon CategoryPanel--icon sk-image"></image>
-        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-704 sk-text"
+        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-345 sk-text"
           >服饰</text
         >
       </navigator>
       <navigator class="category-item CategoryPanel--category-item" hover-class="none">
         <image class="icon CategoryPanel--icon sk-image"></image>
-        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-623 sk-text"
+        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-198 sk-text"
           >母婴</text
         >
       </navigator>
       <navigator class="category-item CategoryPanel--category-item" hover-class="none">
         <image class="icon CategoryPanel--icon sk-image"></image>
-        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-400 sk-text"
+        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-259 sk-text"
           >个护</text
         >
       </navigator>
       <navigator class="category-item CategoryPanel--category-item" hover-class="none">
         <image class="icon CategoryPanel--icon sk-image"></image>
-        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-257 sk-text"
+        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-180 sk-text"
           >严选</text
         >
       </navigator>
       <navigator class="category-item CategoryPanel--category-item" hover-class="none">
         <image class="icon CategoryPanel--icon sk-image"></image>
-        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-983 sk-text"
+        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-502 sk-text"
           >数码</text
         >
       </navigator>
       <navigator class="category-item CategoryPanel--category-item" hover-class="none">
         <image class="icon CategoryPanel--icon sk-image"></image>
-        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-259 sk-text"
-          >运动</text
-        >
+        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-72 sk-text">运动</text>
       </navigator>
       <navigator class="category-item CategoryPanel--category-item" hover-class="none">
         <image class="icon CategoryPanel--icon sk-image"></image>
-        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-446 sk-text"
+        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-935 sk-text"
           >杂项</text
         >
       </navigator>
       <navigator class="category-item CategoryPanel--category-item" hover-class="none">
         <image class="icon CategoryPanel--icon sk-image"></image>
-        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-964 sk-text"
+        <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-258 sk-text"
           >品牌</text
         >
       </navigator>
@@ -98,10 +90,10 @@
     <view class="panel HotPanel--panel hot HotPanel--hot">
       <view class="item HotPanel--item">
         <view class="title HotPanel--title">
-          <text class="title-text HotPanel--title-text sk-transparent sk-text-14-2857-688 sk-text"
+          <text class="title-text HotPanel--title-text sk-transparent sk-text-14-2857-647 sk-text"
             >特惠推荐</text
           >
-          <text class="title-desc HotPanel--title-desc sk-transparent sk-text-14-2857-815 sk-text"
+          <text class="title-desc HotPanel--title-desc sk-transparent sk-text-14-2857-75 sk-text"
             >精选全攻略</text
           >
         </view>
@@ -112,10 +104,10 @@
       </view>
       <view class="item HotPanel--item">
         <view class="title HotPanel--title">
-          <text class="title-text HotPanel--title-text sk-transparent sk-text-14-2857-633 sk-text"
+          <text class="title-text HotPanel--title-text sk-transparent sk-text-14-2857-743 sk-text"
             >爆款推荐</text
           >
-          <text class="title-desc HotPanel--title-desc sk-transparent sk-text-14-2857-288 sk-text"
+          <text class="title-desc HotPanel--title-desc sk-transparent sk-text-14-2857-198 sk-text"
             >最受欢迎</text
           >
         </view>
@@ -126,10 +118,10 @@
       </view>
       <view class="item HotPanel--item">
         <view class="title HotPanel--title">
-          <text class="title-text HotPanel--title-text sk-transparent sk-text-14-2857-150 sk-text"
+          <text class="title-text HotPanel--title-text sk-transparent sk-text-14-2857-692 sk-text"
             >一站买全</text
           >
-          <text class="title-desc HotPanel--title-desc sk-transparent sk-text-14-2857-170 sk-text"
+          <text class="title-desc HotPanel--title-desc sk-transparent sk-text-14-2857-667 sk-text"
             >精心优选</text
           >
         </view>
@@ -140,10 +132,10 @@
       </view>
       <view class="item HotPanel--item">
         <view class="title HotPanel--title">
-          <text class="title-text HotPanel--title-text sk-transparent sk-text-14-2857-926 sk-text"
+          <text class="title-text HotPanel--title-text sk-transparent sk-text-14-2857-680 sk-text"
             >新鲜好物</text
           >
-          <text class="title-desc HotPanel--title-desc sk-transparent sk-text-14-2857-381 sk-text"
+          <text class="title-desc HotPanel--title-desc sk-transparent sk-text-14-2857-740 sk-text"
             >生活加分项</text
           >
         </view>
@@ -154,23 +146,28 @@
       </view>
     </view>
   </view>
+  <view is="components/XtxGuess" class="r">
+    <view class="caption XtxGuess--caption">
+      <text
+        class="text XtxGuess--text sk-transparent sk-text-0-0000-873 sk-text sk-pseudo sk-pseudo-circle"
+        >猜你喜欢</text
+      >
+    </view>
+  </view>
 </template>
+
 <style>
-.carousel {
-  height: 100px;
-  width: 100%;
-}
 .sk-transparent {
   color: transparent !important;
 }
-.sk-text-3-8462-156 {
+.sk-text-3-5714-707 {
   background-image: linear-gradient(
-    transparent 3.8462%,
+    transparent 3.5714%,
     #eeeeee 0%,
-    #eeeeee 96.1538%,
+    #eeeeee 96.4286%,
     transparent 0%
   ) !important;
-  background-size: 100% 27.0833rpx;
+  background-size: 100% 28rpx;
   position: relative !important;
 }
 .sk-text {
@@ -180,84 +177,54 @@
   color: transparent !important;
   background-repeat: repeat-y !important;
 }
-.sk-text-14-2857-610 {
+.sk-text-14-2857-453 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 37.9167rpx;
+  background-size: 100% 39.2rpx;
   position: relative !important;
 }
-.sk-text-14-2857-414 {
+.sk-text-14-2857-175 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 35rpx;
+  background-size: 100% 36.4rpx;
   position: relative !important;
 }
-.sk-text-14-2857-268 {
+.sk-text-14-2857-231 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 35rpx;
+  background-size: 100% 36.4rpx;
   position: relative !important;
 }
-.sk-text-14-2857-704 {
+.sk-text-14-2857-345 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 35rpx;
+  background-size: 100% 36.4rpx;
   position: relative !important;
 }
-.sk-text-14-2857-623 {
+.sk-text-14-2857-198 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 35rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-400 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 35rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-257 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 35rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-983 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 35rpx;
+  background-size: 100% 36.4rpx;
   position: relative !important;
 }
 .sk-text-14-2857-259 {
@@ -267,107 +234,137 @@
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 35rpx;
+  background-size: 100% 36.4rpx;
   position: relative !important;
 }
-.sk-text-14-2857-446 {
+.sk-text-14-2857-180 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 35rpx;
+  background-size: 100% 36.4rpx;
   position: relative !important;
 }
-.sk-text-14-2857-964 {
+.sk-text-14-2857-502 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 35rpx;
+  background-size: 100% 36.4rpx;
   position: relative !important;
 }
-.sk-text-14-2857-688 {
+.sk-text-14-2857-72 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 43.75rpx;
+  background-size: 100% 36.4rpx;
   position: relative !important;
 }
-.sk-text-14-2857-815 {
+.sk-text-14-2857-935 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 32.0833rpx;
+  background-size: 100% 36.4rpx;
   position: relative !important;
 }
-.sk-text-14-2857-633 {
+.sk-text-14-2857-258 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 43.75rpx;
+  background-size: 100% 36.4rpx;
   position: relative !important;
 }
-.sk-text-14-2857-288 {
+.sk-text-14-2857-647 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 32.0833rpx;
+  background-size: 100% 44.8rpx;
   position: relative !important;
 }
-.sk-text-14-2857-150 {
+.sk-text-14-2857-75 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 43.75rpx;
+  background-size: 100% 33.6rpx;
   position: relative !important;
 }
-.sk-text-14-2857-170 {
+.sk-text-14-2857-743 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 32.0833rpx;
+  background-size: 100% 44.8rpx;
   position: relative !important;
 }
-.sk-text-14-2857-926 {
+.sk-text-14-2857-692 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 43.75rpx;
+  background-size: 100% 44.8rpx;
   position: relative !important;
 }
-.sk-text-14-2857-381 {
+.sk-text-14-2857-667 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 32.0833rpx;
+  background-size: 100% 33.6rpx;
+  position: relative !important;
+}
+.sk-text-14-2857-680 {
+  background-image: linear-gradient(
+    transparent 14.2857%,
+    #eeeeee 0%,
+    #eeeeee 85.7143%,
+    transparent 0%
+  ) !important;
+  background-size: 100% 44.8rpx;
+  position: relative !important;
+}
+.sk-text-14-2857-740 {
+  background-image: linear-gradient(
+    transparent 14.2857%,
+    #eeeeee 0%,
+    #eeeeee 85.7143%,
+    transparent 0%
+  ) !important;
+  background-size: 100% 33.6rpx;
+  position: relative !important;
+}
+.sk-text-0-0000-873 {
+  background-image: linear-gradient(
+    transparent 0%,
+    #eeeeee 0%,
+    #eeeeee 100%,
+    transparent 0%
+  ) !important;
+  background-size: 100% 32rpx;
   position: relative !important;
 }
 .sk-image {
