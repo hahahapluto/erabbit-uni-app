@@ -25,12 +25,16 @@ uni.setNavigationBarTitle({ title: curUrlMap!.title })
 // 获取推荐封面图
 const bannerPicture = ref('')
 //推荐选项
-const subTypes = ref<SubTypeItem[]>([])
+const subTypes = ref<(SubTypeItem & { finish?: boolean })[]>([])
 // 高亮的下标
 const activeIndex = ref(0)
 // 获取热门推荐数据
 const getHotRecommendData = async () => {
-  const res = await getHotRecommendAPI(curUrlMap!.url)
+  const res = await getHotRecommendAPI(curUrlMap!.url, {
+    // 技巧：环境变量，开发环境，修改初始页面方便测试分页结果
+    page: import.meta.env.DEV ? 30 : 1,
+    pageSize: 10,
+  })
   bannerPicture.value = res.result.bannerPicture
   subTypes.value = res.result.subTypes
 }
@@ -44,16 +48,23 @@ onLoad(() => {
 const onScrolltolower = async () => {
   // 获取当前选项
   const currsubTypes = subTypes.value[activeIndex.value]
-  // 当前页码累加
-  currsubTypes.goodsItems.page++
+  // 分页条件
+  if (currsubTypes.goodsItems.page < currsubTypes.goodsItems.pages) {
+    // 当前页码累加
+    currsubTypes.goodsItems.page++
+  } else {
+    // 标记已结束
+    currsubTypes.finish = true
+    // 退出并轻提示
+    return uni.showToast({ icon: 'none', title: '没有更多数据了！' })
+  }
+
   // 调用AOI 传参
   const res = await getHotRecommendAPI(curUrlMap!.url, {
     subType: currsubTypes.id,
     page: currsubTypes.goodsItems.page,
     pageSize: currsubTypes.goodsItems.pageSize,
   })
-  console.log(res)
-
   // 新的列表选项
   const newSubTypes = res.result.subTypes[activeIndex.value]
   // 数组追加
@@ -103,7 +114,7 @@ const onScrolltolower = async () => {
           </view>
         </navigator>
       </view>
-      <view class="loading-text">正在加载...</view>
+      <view class="loading-text">{{ item.finish ? '没有更多数据了！' : '正在加载...' }}</view>
     </scroll-view>
   </view>
 </template>
